@@ -6,6 +6,20 @@
 
 :root {
   --primary-font: 'Nunito Sans';
+
+  --light-primary-color: var(--white);
+  --light-background-color: var(--very-light-gray);
+  --light-text-color: var(--mostly-black-blue);
+  --dark-primary-color: var(--dark-blue);
+  --dark-background-color: var(--very-dark-blue);
+  --dark-text-color: var(--white);
+
+  --dark-blue: #2b3945;
+  --very-dark-blue: #202c37;
+  --mostly-black-blue: #111517;
+  --dark-gray: #858585;
+  --very-light-gray: #fafafa;
+  --white: #fff;
 }
 
 html,
@@ -24,14 +38,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }
