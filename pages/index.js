@@ -1,13 +1,27 @@
 import Head from 'next/head'
-import {useContext} from 'react'
+import {useContext, useState} from 'react'
 import {CountryContext} from '../components/wrapper'
 import Card from '../components/card'
+import Search from '../components/search'
 
 export default function Home() {
+  const [text, setText] = useState('')
   const data = useContext(CountryContext)
 
   function sortByName(data) {
     return data.sort((a, b) => (a.name.common > b.name.common ? 1 : -1))
+  }
+
+  function handleInput(value) {
+    setText(value)
+  }
+
+  function filterData(data, text) {
+    return text.length > 0
+      ? data.filter((item) =>
+          item.name.common.toLowerCase().includes(text.toLowerCase()),
+        )
+      : data
   }
 
   return (
@@ -17,9 +31,12 @@ export default function Home() {
         <meta name="description" content="Web site to search a country" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className="my-3 flex flex-wrap justify-start gap-y-8 md:flex-nowrap md:justify-between">
+        <Search handleInput={handleInput} text={text} />
+      </div>
       <div className="relative mx-5 mt-9 grid grid-cols-1 gap-10 text-sm sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {data &&
-          sortByName(data).map((item, i) => (
+          sortByName(filterData(data, text)).map((item, i) => (
             <Card
               code={item.cca3}
               flag={item.flags.png}
