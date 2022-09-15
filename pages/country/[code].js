@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import {useCountryContext} from '../../hooks/useFetch'
+import BackButton from '../../components/back-button'
 import ButtonLink from '../../components/button-link'
 
 export default function Detail({detailData}) {
@@ -26,12 +27,16 @@ export default function Detail({detailData}) {
 
   return (
     <>
+      <div className="mx-3 mt-3 mb-9 sm:mx-0">
+        <BackButton />
+      </div>
+
       {detailData && (
         <div className="grid flex-1 grid-cols-1 lg:grid-cols-2">
-          <div className="relative mx-3 h-[40vh] sm:h-[50vh] max-h-[70vh] sm:mx-0 lg:mr-5">
+          <div className="relative mx-3 h-[40vh] max-h-[70vh] sm:mx-0 sm:h-[50vh] lg:mr-5">
             <Image
               src={detailData.flags.svg}
-              className=" shadow-lg"
+              className="drop-shadow-lg"
               alt="flag"
               layout="fill"
               objectFit="contain"
