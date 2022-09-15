@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import {useCountryContext} from '../../hooks/useFetch'
 import ButtonLink from '../../components/button-link'
 
@@ -27,11 +28,13 @@ export default function Detail({detailData}) {
     <>
       {detailData && (
         <div className="grid flex-1 grid-cols-1 lg:grid-cols-2">
-          <div className="mx-3 sm:mx-0 lg:mr-5">
-            <img
+          <div className="relative mx-3 h-[40vh] sm:h-[50vh] max-h-[70vh] sm:mx-0 lg:mr-5">
+            <Image
               src={detailData.flags.svg}
-              className="max-h-[70vh] shadow-lg"
+              className=" shadow-lg"
               alt="flag"
+              layout="fill"
+              objectFit="contain"
             />
           </div>
           <div className="flex flex-col items-start px-3 py-5 sm:px-6">

@@ -5,6 +5,9 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  images: {
+    domains: ['upload.wikimedia.org', 'flagcdn.com'],
+  },
 }
 
 module.exports = nextConfig

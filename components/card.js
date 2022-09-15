@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Card({code, flag, name, population, region, capital}) {
   return (
@@ -7,11 +8,12 @@ export default function Card({code, flag, name, population, region, capital}) {
       className="justify center relative flex h-full flex-col drop-shadow-lg dark:drop-shadow-[0_2px_2px_rgba(0,0,0,1)] dark:focus:rounded-md dark:focus:outline-0 dark:focus:ring dark:focus:ring-indigo-500 dark:focus:ring-offset-0"
     >
       <div>
-        <img
-          variant="top"
+        <Image
           src={flag}
           className="overflow-hidden rounded-t-md border border-b-gray-300 dark:border-[color:var(--dark-primary-color)]"
           alt={`flag of ${name}`}
+          width={500}
+          height={300}
         />
         <div className="flex flex-1 flex-col rounded-b-md bg-[color:var(--light-primary-color)] p-5 dark:bg-[color:var(--dark-primary-color)]">
           <h1 className="mb-2 text-xl font-extrabold">{name}</h1>
