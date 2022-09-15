@@ -1,13 +1,15 @@
 import '../styles/globals.css'
 import Layout from '../components/layout'
-import {Wrapper} from '../components/wrapper'
+import {CountryContext, useFetch} from '../hooks/useFetch'
 
 function MyApp({Component, pageProps}) {
+  const {data} = useFetch()
+
   return (
     <Layout>
-      <Wrapper>
+      <CountryContext.Provider value={data}>
         <Component {...pageProps} />
-      </Wrapper>
+      </CountryContext.Provider>
     </Layout>
   )
 }

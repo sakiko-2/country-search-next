@@ -1,12 +1,14 @@
 import Head from 'next/head'
-import {useContext, useState} from 'react'
-import {CountryContext} from '../components/wrapper'
+import {useState} from 'react'
+import {useCountryContext} from '../hooks/useFetch'
 import Card from '../components/card'
 import Search from '../components/search'
 
 export default function Home() {
   const [text, setText] = useState('')
-  const data = useContext(CountryContext)
+  const data = useCountryContext()
+
+  if (!data) return <div>loading...</div>
 
   function sortByName(data) {
     return data.sort((a, b) => (a.name.common > b.name.common ? 1 : -1))
