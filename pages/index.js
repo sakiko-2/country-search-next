@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import {useState} from 'react'
 import {useCountryContext} from '../hooks/use-fetch'
 import Card from '../components/card'
@@ -43,12 +42,6 @@ export default function Home() {
 
   return (
     <div>
-      <Head>
-        <title>Country Search App</title>
-        <meta name="description" content="Web site to search a country" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <div className="my-3 flex flex-wrap justify-start gap-y-8 md:flex-nowrap md:justify-between">
         <Search handleInput={handleInput} text={text} />
         <Dropdown
