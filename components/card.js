@@ -3,14 +3,11 @@ import Image from 'next/image'
 
 export default function Card({code, flag, name, population, region, capital}) {
   return (
-    <Link
-      href={`/country/${code}`}
-      className="justify center relative flex h-full flex-col drop-shadow-lg dark:drop-shadow-[0_2px_2px_rgba(0,0,0,1)] dark:focus:rounded-md dark:focus:outline-0 dark:focus:ring dark:focus:ring-indigo-500 dark:focus:ring-offset-0"
-    >
-      <div>
+    <Link href={`/country/${code}`}>
+      <a className="justify center relative flex h-full flex-col drop-shadow-lg focus:rounded-md dark:drop-shadow-[0_2px_2px_rgba(0,0,0,1)] dark:focus:outline-0 dark:focus:ring dark:focus:ring-indigo-500 dark:focus:ring-offset-0">
         <Image
           src={flag}
-          className="overflow-hidden rounded-t-md border border-b-gray-300 dark:border-[color:var(--dark-primary-color)]"
+          className="mb-0 overflow-hidden rounded-t-md border border-b-gray-300 dark:border-[color:var(--dark-primary-color)]"
           alt={`flag of ${name}`}
           width={500}
           height={300}
@@ -30,7 +27,7 @@ export default function Card({code, flag, name, population, region, capital}) {
             {capital || '-'}
           </div>
         </div>
-      </div>
+      </a>
     </Link>
   )
 }
