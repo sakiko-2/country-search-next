@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import Layout from '../components/layout'
-import {CountryContext, useFetch} from '../hooks/useFetch'
+import {CountryContext, useFetch} from '../hooks/use-fetch'
 
 function MyApp({Component, pageProps}) {
   const {data} = useFetch()

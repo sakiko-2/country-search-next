@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import {useState} from 'react'
-import {useCountryContext} from '../hooks/useFetch'
+import {useCountryContext} from '../hooks/use-fetch'
 import Card from '../components/card'
 import Dropdown from '../components/dropdown'
 import Search from '../components/search'

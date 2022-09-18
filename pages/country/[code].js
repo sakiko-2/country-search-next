@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import {useCountryContext} from '../../hooks/useFetch'
+import {useCountryContext} from '../../hooks/use-fetch'
 import BackButton from '../../components/back-button'
 import ButtonLink from '../../components/button-link'
 
