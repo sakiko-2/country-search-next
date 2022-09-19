@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Card({code, flag, name, population, region, capital}) {
   return (
     <Link href={`/country/${code}`}>
-      <a className="justify center relative flex h-full flex-col drop-shadow-lg focus:rounded-md dark:drop-shadow-[0_2px_2px_rgba(0,0,0,1)] dark:focus:outline-0 dark:focus:ring dark:focus:ring-indigo-500 dark:focus:ring-offset-0">
+      <a className="justify center relative flex h-full flex-col divide-y drop-shadow-lg focus:rounded-md dark:divide-y-0 dark:drop-shadow-[0_2px_2px_rgba(0,0,0,1)] dark:focus:outline-0 dark:focus:ring dark:focus:ring-indigo-500 dark:focus:ring-offset-0">
         <Image
           src={flag}
           className="mb-0 overflow-hidden rounded-t-md border border-b-gray-300 dark:border-[color:var(--dark-primary-color)]"
