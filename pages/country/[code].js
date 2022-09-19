@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Image from 'next/image'
 import {useCountryContext} from '../../hooks/use-fetch'
 import BackButton from '../../components/back-button'
@@ -27,6 +28,13 @@ export default function Detail({detailData}) {
 
   return (
     <>
+      <Head>
+        <title>
+          {detailData && `${detailData.name.common} | `}Country Search App
+        </title>
+        <meta name="description" content="Web site to search a country" />
+      </Head>
+
       <div className="mx-3 mt-3 mb-9 sm:mx-0">
         <BackButton />
       </div>
