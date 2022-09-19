@@ -1,5 +1,20 @@
 # Country Search - Next.js
 
+## Screenshots
+
+<div>
+  <h3>Desktop</h3>
+  <img src="./screenshots/desktop.png" width="700" alt="desktop home page light mode screenshot">
+  <img src="./screenshots/desktop-dark.png" width="700" alt="desktop detail page dark mode screenshot">
+</div>
+<br/>
+<div>
+  <h3>Mobile</h3>
+  <img src="./screenshots/mobile.png" width="250" alt="mobile home page light mode screenshot">
+  <img src="./screenshots/mobile-dark.png" width="250" alt="mobile detail page dark mode screenshot">
+</div>
+<br />
+
 ## Built with
 
 - [Next.js](https://github.com/vercel/next.js/) - React based framework with
